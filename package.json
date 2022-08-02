@@ -1,5 +1,5 @@
 {
-  "name": "template-svelte-esm",
+  "name": "dorako-ui-trl",
   "description": "Provides a bare-bones Foundry module template repo to get set up with using the TyphonJS Runtime Library and Svelte with ES Modules.",
   "license": "MIT",
   "private": true,
@@ -9,8 +9,10 @@
     "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
   ],
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@typhonjs-fvtt/runtime": "^0.0.18",
-    "svelte": "^3.49.0"
+    "svelte": "^3.49.0",
+    "svelte-fa": "^3.0.3"
   },
   "devDependencies": {
     "@typhonjs-config/eslint-config": "^0.3.0",
@@ -19,7 +21,10 @@
     "svelte-preprocess": "^4.10.0",
     "vite": "^3"
   },
-  "browserslist": [">5%", "not IE 11"],
+  "browserslist": [
+    ">5%",
+    "not IE 11"
+  ],
   "scripts": {
     "build": "vite build",
     "dev": "vite",
