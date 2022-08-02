@@ -20,7 +20,6 @@
       </div>
       <hr />
       <div class="description">
-         {_token.}
          You can trick and mislead others using disguises, lies, and other forms of subterfuge.
       </div>
    </div>
