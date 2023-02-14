@@ -18,7 +18,8 @@
       border: 2px solid rgba(0, 0, 0, 0.1);
       font-family: Roboto;
       font-size: x-small;
-
+      height: fit-content;
+      font-weight: bolder;
       &.brown {
          color: white;
          background: #786452;

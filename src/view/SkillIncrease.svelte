@@ -1,21 +1,9 @@
 <script>
-   // import Fa, {
-   // } from 'svelte-fa/src/fa.svelte'
-   // import FaLayers from "svelte-fa/src/fa.svelte"
-
    import Fa from "svelte-fa";
-   import {
-      faCirclePlus,
-      faCircle,
-      faCircleDot,
-      faCircleArrowUp,
-      faRightLeft,
-   } from "@fortawesome/free-solid-svg-icons";
+   import { faCirclePlus, faCircleDot, faCircleArrowUp, faRightLeft } from "@fortawesome/free-solid-svg-icons";
 
    export let prof;
    export let type;
-
-   //    let data = await fromUuid("Compendium.pf2e.actionspf2e.QNAVeNKtHA0EUw4X");
 </script>
 
 <div class={"box " + (type === "disabled" ? "disabled " : "")}>
@@ -45,6 +33,7 @@
          {/if}
       </div>
       <div class="rightIcon">
+         <!-- svelte-ignore empty-block -->
          {#if type === "increase" || type == "disabled"}
             <Fa fw icon={faCirclePlus} size="2x" />
          {:else if type === "swap"}

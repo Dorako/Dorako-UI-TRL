@@ -36,8 +36,11 @@
          color: #5e0000;
          font-variant-caps: small-caps;
          font-weight: bold;
-         font-size: x-large;
-         font-family: "Modesto Condensed";
+         // font-size: x-large;
+         // font-family: "Modesto Condensed";
+         font-family: var(--serif);
+         line-height: 1em;
+         font-size: large;
       }
       .label {
          text-transform: uppercase;

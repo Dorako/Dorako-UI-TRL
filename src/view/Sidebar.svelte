@@ -13,6 +13,7 @@
    } from "@fortawesome/free-solid-svg-icons";
    import ProfBadge from "./ProfBadge.svelte";
    import Outlinebutton from "./Outlinebutton.svelte";
+   import Language from "./Language.svelte";
 </script>
 
 <div class="sidebar">
@@ -31,7 +32,7 @@
                <Fa fw icon={faDiceD20} />
             </div>
             <div class="bonus">+10</div>
-            <div class="prof"><ProfBadge prof="expert" /></div>
+            <div class="prof"><ProfBadge prof="2" /></div>
             <div class="name">Reflex</div>
          </div>
          <div class="row">
@@ -39,7 +40,7 @@
                <Fa fw icon={faDiceD20} />
             </div>
             <div class="bonus">+4</div>
-            <div class="prof"><ProfBadge prof="trained" /></div>
+            <div class="prof"><ProfBadge prof="1" /></div>
             <div class="name">Fortitude</div>
          </div>
 
@@ -48,7 +49,7 @@
                <Fa fw icon={faDiceD20} />
             </div>
             <div class="bonus">+3</div>
-            <div class="prof"><ProfBadge prof="untrained" /></div>
+            <div class="prof"><ProfBadge prof="0" /></div>
             <div class="name">Will</div>
          </div>
       </div>
@@ -65,7 +66,6 @@
       <hr />
 
       <div class="sensesBody">
-         <div class="rows" />
          <div class="senses">
             <Outlinebutton>Fire</Outlinebutton>
          </div>
@@ -83,7 +83,6 @@
       <hr />
 
       <div class="sensesBody">
-         <div class="rows" />
          <div class="senses">
             <Outlinebutton>Cold | 5</Outlinebutton>
             <Outlinebutton>Bludgeoning | 2</Outlinebutton>
@@ -101,7 +100,6 @@
       <!-- <hr> -->
 
       <div class="sensesBody">
-         <div class="rows" />
          <div class="senses" />
       </div>
    </div>
@@ -117,20 +115,53 @@
       <hr />
 
       <div class="sensesBody">
-         <div class="rows">
-            <div class="row">
-               <div class="die">
-                  <Fa fw icon={faDiceD20} />
-               </div>
-               <div class="bonus">+10</div>
-               <div class="prof"><ProfBadge prof="legendary" /></div>
-               <div class="name">Perception</div>
+         <div class="row">
+            <div class="die">
+               <Fa fw icon={faDiceD20} />
             </div>
-            <hr />
+            <div class="bonus">+10</div>
+            <div class="prof"><ProfBadge prof="4" /></div>
+            <div class="name">Perception</div>
          </div>
+         <hr />
+
          <div class="senses">
             <Outlinebutton>Darkvision</Outlinebutton>
             <Outlinebutton>Scent (Imprecise) | 30ft</Outlinebutton>
+         </div>
+      </div>
+   </div>
+
+   <div class="item">
+      <div class="languages">
+         <Language rarity="common">Common</Language>
+         <Language rarity="uncommon">Undercommon</Language>
+         <Language rarity="rare">Aklo</Language>
+      </div>
+      <div class="goldencircles">
+         <div class="myGolden">
+            <div class="fas fw fa-address-card" />
+         </div>
+         <div class="myGolden">
+            <div class="fas fw fa-box-open" />
+         </div>
+         <div class="myGolden">
+            <div class="fas fw fa-magic" />
+         </div>
+         <div class="myGolden">
+            <div class="fas fw fa-hammer" />
+         </div>
+         <div class="myGolden">
+            <div class="fas fw fa-hand-paper" />
+         </div>
+         <div class="myGolden">
+            <div class="fas fw fa-medal" />
+         </div>
+         <div class="myGolden">
+            <div class="fas fw fa-star" />
+         </div>
+         <div class="myGolden">
+            <div class="fas fw fa-book-reader" />
          </div>
       </div>
    </div>
@@ -138,6 +169,40 @@
 
 <style lang="scss">
    @use "sass:color";
+
+   .goldencircles {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5px;
+   }
+
+   .myGolden {
+      border-radius: 50%;
+      border: 2px solid #dbc682;
+      background-color: #18181e;
+      text-align: center;
+      color: #dbc682;
+      width: 48px;
+      height: 48px;
+      box-shadow: 0px 0px 2px #000000, 0px 4px 4px rgba(0, 0, 0, 0.25);
+      transition: 0.25s;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      .fas {
+         margin-top: 10px;
+         display: flex;
+         justify-content: center;
+         align-content: center;
+         font-size: 1.5em;
+      }
+      &:hover {
+         color: white;
+         box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.68), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 2px #000000,
+            inset 0px 4px 8px rgba(255, 255, 255, 0.25);
+         background-color: #5e0000;
+         transform: scale(1.1);
+      }
+   }
 
    .item {
       /* Background/Color */
@@ -161,7 +226,6 @@
    .sensesBody {
       display: flex;
       flex-direction: column;
-      gap: 5px;
    }
    .senses {
       display: flex;
@@ -171,8 +235,8 @@
    .sidebar {
       display: flex;
       flex-direction: column;
-      width: 250px;
-      // flex: 0 0 230px;
+      // width: 300px;
+      flex: 0 0 230px;
       gap: 10px;
 
       .titleGroup {

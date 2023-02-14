@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="button">
+<div class="button" on:click>
    <span><slot>missing button</slot></span>
 </div>
 

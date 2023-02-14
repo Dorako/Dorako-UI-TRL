@@ -1,10 +1,18 @@
 <script>
    export let prof;
+
+   let rankToLabel = {
+      0: "untrained",
+      1: "trained",
+      2: "expert",
+      3: "master",
+      4: "legendary",
+   };
 </script>
 
 <div class="wrapper">
-   <div class={"prof " + prof}>
-      <div>{prof[0].toUpperCase()}</div>
+   <div class={"prof " + rankToLabel[prof]}>
+      <div>{rankToLabel[prof][0].toUpperCase()}</div>
    </div>
 </div>
 

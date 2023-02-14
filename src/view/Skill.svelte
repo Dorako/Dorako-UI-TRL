@@ -2,19 +2,18 @@
    import Actions from "./Actions.svelte";
    import ProfButton from "./ProfButton.svelte";
    import UpButton from "./UpButton.svelte";
-   let actionGroupSelected = "available";
+   import SkillProgressionApplication from "./SkillProgressionApplication.js";
 
-   function handleClick() {
-      alert("Level up!");
-   }
+   let actionGroupSelected = "available";
+   export let skillName = "Deception";
 </script>
 
 <div class="wrapper">
    <div class="card">
       <div class="titleGroup">
-         <div class="title">Deception</div>
+         <div class="title">{skillName}</div>
          <div class="right">
-            <UpButton on:click={handleClick} />
+            <UpButton on:click={() => new SkillProgressionApplication().render(true, { focus: true })} />
             <ProfButton />
          </div>
       </div>
@@ -62,30 +61,32 @@
          .title {
             color: #5e0000;
             font-variant-caps: small-caps;
-            font-size: 100px;
-            font-family: "Modesto Condensed";
+            font-size: x-large;
+            // font-family: "Modesto Condensed";
+            font-family: var(--serif);
+            line-height: 1;
          }
       }
       hr {
          border-top: 1px solid #e5e1de;
       }
 
-      .text {
-         color: #1c1c1c;
-         line-height: 1.2;
-         mask-image: linear-gradient(180deg, #000 80%, transparent);
-      }
+      // .text {
+      //    color: #1c1c1c;
+      //    line-height: 1.2;
+      //    mask-image: linear-gradient(180deg, #000 80%, transparent);
+      // }
 
-      .buttons {
-         display: flex;
-         gap: 5px;
-         justify-content: space-between;
-         gap: 10px;
-         .left {
-            display: flex;
-            gap: 5px;
-         }
-      }
+      // .buttons {
+      //    display: flex;
+      //    gap: 5px;
+      //    justify-content: space-between;
+      //    gap: 10px;
+      //    .left {
+      //       display: flex;
+      //       gap: 5px;
+      //    }
+      // }
    }
    .wrapper {
       display: flex;

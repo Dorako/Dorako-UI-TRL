@@ -13,6 +13,7 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
+      gap: 10px;
       // width: 580px;
       // gap: 15px;
 
@@ -21,8 +22,6 @@
          // margin-left:30px;
          // flex: 1 0 300px;
          // background: linear-gradient(-90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 50%, transparent 100%);;
-      }
-      .right {
       }
    }
 </style>

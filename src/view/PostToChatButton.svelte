@@ -1,33 +1,21 @@
 <script>
 </script>
 
-<div class="actbutton action" on:click on:mouseover on:mouseleave>
-   <div><span><slot>A</slot></span></div>
-</div>
-<!-- <div class="actbutton action">
-   <div><span>2</span></div>
-</div> -->
-
-<!-- <div class="actbutton action">
-   <div><span>3</span></div>
-</div>
-<div class="actbutton action">
-   <div><span>F</span></div>
+<div class="actbutton action" on:click>
+   <!-- <span>A</span> -->
+   <div class="fas fa-comment-alt" />
 </div>
 
-<div class="actbutton action">
-   <div><span>R</span></div>
-</div> -->
 <style lang="scss">
    @use "sass:color";
 
    .actbutton {
       font-family: Pathfinder2eActions;
       cursor: pointer;
-      // line-height: 1.5em;
+      // line-height: 2em;
       width: 50px;
       // height: 1.5em;
-      font-size: xx-large;
+      font-size: large;
       /* Background/Dark */
       background-color: #e7d9cf;
       /* Bastard/Soft border */
@@ -40,7 +28,9 @@
       transition: 0.1s;
 
       div {
-         transform: translateY(-2px);
+         transform: translateY(5px);
+         color: #343438;
+         text-shadow: 0px 1px 1px white;
       }
       span {
          // text-shadow:
